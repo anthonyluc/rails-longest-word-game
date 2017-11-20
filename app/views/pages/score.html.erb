@@ -1,0 +1,17 @@
+<h1>Pages#score</h1>
+<p>Find me in app/views/pages/score.html.erb</p>
+
+<h1>What's your best shot?</h1>
+ <%= @full_grid %>
+<h2>Now your result</h2>
+  Your word : <%= @attempt %><br />
+  Time Taken to answer: <%= @result[:time] %><br />
+  Your score: <%= @result[:score] %><br />
+  Message: <%= @result[:message] %><br />
+
+<h2>Best score</h2>
+grid : <%= session[:grid] %><br />
+score : <%= session[:best_score] %><br />
+word : <%= session[:best_word] %><br />
+<br />
+<%= link_to 'Start a new game','game' %>
